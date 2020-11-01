@@ -19,4 +19,3 @@ class Solution:
             integer += rev_binary[i] * (2 ** i)
         
         return integer
-        
