@@ -9,3 +9,4 @@ class Solution:
 			else:
 				odd += 1
 		return min(even, odd)
+		
