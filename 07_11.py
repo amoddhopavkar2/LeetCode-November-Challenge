@@ -20,17 +20,17 @@ class Solution:
             l2 = l2.next
             
         current = None
-        sum = 0
-        while stack_1 or stack_2 or sum:
+        total = 0
+        while stack_1 or stack_2 or total:
             if stack_1:
-                sum += stack_1.pop()
+                total += stack_1.pop()
             if stack_2:
-                sum += stack_2.pop()
+                total += stack_2.pop()
                 
-            node = ListNode(sum % 10)
+            node = ListNode(total % 10)
             node.next = current
             current = node
-            sum = sum // 10
+            total = total // 10
         
         return current
         
