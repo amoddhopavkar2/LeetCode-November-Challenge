@@ -14,7 +14,7 @@ class Solution:
                 distance = dis(points[i], points[j])
                 d[tuple(points[i])].append(distance)
                 d[tuple(points[j])].append(distance)
-        
+                
         for point, distances in d.items():                  
             distances.sort()
             if not (distances[0] == distances[1] and sum(distances[:2]) == distances[2]):
