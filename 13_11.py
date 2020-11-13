@@ -1,7 +1,7 @@
 # Populating Next Right Pointers in Each Node
 
 """
-# Definition for a Node.
+Definition for a Node.
 class Node:
     def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
         self.val = val
