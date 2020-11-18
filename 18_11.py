@@ -6,14 +6,14 @@ class Solution:
             return []
         
         intervals = sorted(intervals, key = lambda x: x[0])
-        merged = []
-        merged.append(intervals[0])
+        result = []
+        result.append(intervals[0])
         
         for interval in intervals[1:]:
-            if interval[0] <= merged[-1][1]:
-                merged[-1][1] = max(merged[-1][1], interval[1])
+            if interval[0] <= result[-1][1]:
+                result[-1][1] = max(result[-1][1], interval[1])
             else:
-                merged.append(interval)
+                result.append(interval)
         
-        return merged
+        return result
         
