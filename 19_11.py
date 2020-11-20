@@ -13,3 +13,4 @@ class Solution:
                     n,t=t[-1]+n,t[:-1]
                 t+=f*int(n)
         return t
+        
