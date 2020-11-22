@@ -10,5 +10,5 @@ class Solution:
             for char in word:
                 morse += morse_code[ord(char) - 97]
             result.append(morse)
-        return (len(set(result)))
+        return len(set(result))
         
