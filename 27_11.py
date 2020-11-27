@@ -5,21 +5,21 @@ class Solution:
         if sum(nums) % 2 == 1:
             return False
 
-        target = sum(nums) // 2
-        dp = [0] * (target * 2)
+        key = sum(nums) // 2
+        dp = [0] * (key * 2)
         dp[0] = 1
         for num in nums:
-            if num > target:
+            if num > key:
                 return False 
             
-            if num == target:
+            if num == key:
                 return True
             
-            for i in range(target, -1, -1):
+            for i in range(key, -1, -1):
                 if dp[i] == 1:
                     dp[i+num] = 1
                 
-                if dp[target]:
+                if dp[key]:
                     return True
         
         return False
