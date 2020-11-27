@@ -11,14 +11,15 @@ class Solution:
         for num in nums:
             if num > target:
                 return False 
+            
             if num == target:
                 return True
             
             for i in range(target, -1, -1):
                 if dp[i] == 1:
                     dp[i+num] = 1
+                
                 if dp[target]:
                     return True
         
         return False
-        
